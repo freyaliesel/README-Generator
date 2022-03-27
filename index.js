@@ -1,7 +1,6 @@
 // TODO: Include packages needed for this application
 const inquirer = require("inquirer");
 const fs = require("fs");
-const md = require("./utils/generateMarkdown");
 const generateMarkdown = require("./utils/generateMarkdown");
 
 // TODO: Create an array of questions for user input
@@ -26,12 +25,12 @@ const questions = [
     //     name: "usage",
     //     message: "How to use:",
     // },
-    // {
-    //     type: "list",
-    //     name: "license",
-    //     message: "Under which license is your project covered:",
-    //     choices: ["Creative Commons", "MIT", "None"],
-    // },
+    {
+        type: "list",
+        name: "license",
+        message: "Under which license is your project covered:",
+        choices: ["Creative Commons", "MIT", "None"],
+    },
     // {
     //     type: "input",
     //     name: "credits",
