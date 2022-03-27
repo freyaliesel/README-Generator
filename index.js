@@ -9,7 +9,7 @@ const questions = [
     {
         type: "input",
         name: "title",
-        message: "Title:",
+        message: "Project title:",
     },
     // {
     //     type: "input",
@@ -31,6 +31,21 @@ const questions = [
     //     name: "license",
     //     message: "Under which license is your project covered:",
     //     choices: ["Creative Commons", "MIT", "None"],
+    // },
+    // {
+    //     type: "input",
+    //     name: "credits",
+    //     message: "Credit other contributors"
+    // },
+    // {
+    //     type: "input",
+    //     name: "assets",
+    //     message: "List third-party assets that require attribution:"
+    // },
+    // {
+    //     type: "input",
+    //     name: "tutorials",
+    //     message: "If a tutorial was used, name it/them and provide link(s):"
     // },
     // {
     //     type: "input",
@@ -64,8 +79,6 @@ function writeToFile(fileName, data) {
 // TODO: Create a function to initialize app
 function init() {
     inquirer.prompt(questions).then((responses) => {
-        // console.log(responses);
-        // generateMarkdown(responses)
         writeToFile(`${responses.title}_README.md`, generateMarkdown(responses));
     });
 }

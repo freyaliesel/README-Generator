@@ -1,4 +1,9 @@
+const fs = require("fs");
+
 // TODO: Create a function that returns a license badge based on which license is passed in
+
+const { fstat } = require("fs");
+
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {}
 
@@ -14,7 +19,8 @@ function renderLicenseSection(license) {}
 function generateMarkdown(data) {
   console.log("received data")
   console.log(data);
-  return `# ${data.title}`;
+  // return `# ${data.title}`;
+  return eval("`" + fs.readFileSync("./utils/template.md", "utf-8") + "`" );
 }
 
 module.exports = generateMarkdown;
