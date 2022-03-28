@@ -31,6 +31,16 @@ const questions = [
         message: "Under which license is your project covered:",
         choices: ["Creative Commons", "MIT", "None"],
     },
+    {
+        type: "input",
+        name: "rightsHolder",
+        message: "Project copyright holder's name:",
+    },
+    {
+        type: "input",
+        name: "year",
+        message: "Project copyright year:",
+    },
     // {
     //     type: "input",
     //     name: "credits",
