@@ -8,31 +8,21 @@ ${data.description}
 
 ## Table of Contents
 
-- [Installation](#installation)
-- [Features](#features)
-- [Usage](#usage)
+${data.install ? `- [Installation](#installation)` : ""}
+${data.features ? `- [Features](#features)` : ""}
+${data.usage ? `- [Usage](#usage)` : ""}
 - [Contact](#contact)
-- [License](#license)
+${data.license ? `- [License](#license)`: ""}
 
-## Installation
+${data.install ? `## Installation\n\n ${data.install}` : ""}
 
-${data.install}
+${data.features ? `## Features\n\n ${data.features}` : ""}   
 
-## Features
+${data.usage ? `## Usage\n\n ${data.usage}` : ""}
 
-If your project has a lot of features, list them here.    
+${data.credits ? `## Contributions\n\n ${data.credits}` : ""}
 
-## Usage
-
-${data.usage}
-
-## Contributions
-
-${data.contribute}
-
-## Tests
-
-${data.tests}
+${data.tests ? `## Tests\n\n ${data.tests}` : ""}
 
 ## Contact
 
@@ -40,4 +30,4 @@ Find more of my projects at [github.com/${data.github}](https://github.com/${dat
 For questions, email [${data.email}](mailto:${data.email})
 
 
-${data.license ? `## License\n\n ${renderLicenseSection(data.license)}\n\n ${renderLicenseLink(data.license)}` : ""}
+${data.license ? `## License\n\n ${renderLicenseSection(data.license, data.year, data.rightsHolder)}` : ""}
