@@ -34,7 +34,7 @@ const questions = [
         name: "usage",
         message: "Provide instructions and/or an example of the app in use:",
         validate(value) {
-            return value ? true : "Provide written instruction and/or a link in markdown"
+            return value ? true : "Provide written instruction and/or a link in markdown";
         }
     },
     // {
@@ -63,35 +63,49 @@ const questions = [
             return "no"
         }
     },
-    // {
-    //     type: "input",
-    //     name: "github",
-    //     message: "GitHub username:",
-    // },
-    // {
-    //     type: "input",
-    //     name: "email",
-    //     message: "Contact email:",
-    // },
-    // {
-    //     type: "list",
-    //     name: "license",
-    //     message: "Under which license is your project covered:",
-    //     choices: ["Apache", "Creative Commons", "GNU GPLv3", "MIT", "Mozilla", "None"],
-    // },
-    // {
-    //     type: "input",
-    //     name: "rightsHolder",
-    //     message: "Project copyright holder's name:",
-    // },
-    // {
-    //     type: "input",
-    //     name: "year",
-    //     message: "Project copyright year:",
-    //     default() {
-    //         return "2022"
-    //     }
-    // },
+    {
+        type: "input",
+        name: "github",
+        message: "GitHub username:",
+        validate(value) {
+            return value ? true : "Personal or organization username required";
+        }
+    },
+    {
+        type: "input",
+        name: "email",
+        message: "Contact email:",
+        validate(value) {
+            return value ? true : "Personal or organization email address required";
+        }
+    },
+    {
+        type: "list",
+        name: "license",
+        message: "Under which license is your project covered:",
+        choices: ["Apache", "Creative Commons", "GNU GPLv3", "MIT", "Mozilla", "None"],
+    },
+    {
+        type: "input",
+        name: "rightsHolder",
+        message: "Project copyright holder's name:",
+        validate(value) {
+            return value ? true : "Copyright holder name is required";
+        }
+    },
+    {
+        type: "input",
+        name: "year",
+        message: "Project copyright year:",
+        default() {
+            return "2022"
+        },
+        validate (value) {
+            const isNumber = !isNaN(parseFloat(value));
+            const isYear = value.length == 4;
+            return isNumber && isYear ? true : "Please enter a four-digit year."
+        }
+    },
 ];
 
 // TODO: Create a function to write README file
