@@ -8,38 +8,34 @@ const questions = [
     {
         type: "input",
         name: "title",
-        message: "Project title:",
-    },
-    // {
-    //     type: "input",
-    //     name: "description",
-    //     message: "Short description of project:",
-    // },
-    // {
-    //     type: "input",
-    //     name: "install",
-    //     message: "Steps for installation",
-    // },
-    // {
-    //     type: "input",
-    //     name: "usage",
-    //     message: "How to use:",
-    // },
-    {
-        type: "list",
-        name: "license",
-        message: "Under which license is your project covered:",
-        choices: ["Creative Commons", "MIT", "None"],
+        message: "What is the name of the project:",
+        validate(value) {
+            return value ? true : "Title is required";
+        }
     },
     {
         type: "input",
-        name: "rightsHolder",
-        message: "Project copyright holder's name:",
+        name: "description",
+        message: "Describe the project:",
+        validate(value) {
+            return value ? true : "Description is required";
+        }
     },
     {
         type: "input",
-        name: "year",
-        message: "Project copyright year:",
+        name: "install",
+        message: "How to install:",
+        validate(value) {
+            return value ? true : "Provide installation instructions";
+        }
+    },
+    {
+        type: "input",
+        name: "usage",
+        message: "Provide instructions and/or an example of the app in use:",
+        validate(value) {
+            return value ? true : "Provide written instruction and/or a link in markdown"
+        }
     },
     // {
     //     type: "input",
@@ -49,23 +45,24 @@ const questions = [
     // {
     //     type: "input",
     //     name: "assets",
-    //     message: "List third-party assets that require attribution:"
+    //     message: "Credit third-party assets that require attribution:"
     // },
-    // {
-    //     type: "input",
-    //     name: "tutorials",
-    //     message: "If a tutorial was used, name it/them and provide link(s):"
-    // },
-    // {
-    //     type: "input",
-    //     name: "contribute",
-    //     message: "Contribution guidelines:",
-    // },
-    // {
-    //     type: "input",
-    //     name: "tests",
-    //     message: "Provide an example of app in use:",
-    // },
+    {
+        type: "input",
+        name: "contribute",
+        message: "Contribution guidelines:",
+        validate(value) {
+            return value ? true : "Provide instruction on how to contribute to this project"
+        }
+    },
+    {
+        type: "input",
+        name: "tests",
+        message: "Do you have tests?:",
+        default() {
+            return "no"
+        }
+    },
     // {
     //     type: "input",
     //     name: "github",
@@ -75,6 +72,25 @@ const questions = [
     //     type: "input",
     //     name: "email",
     //     message: "Contact email:",
+    // },
+    // {
+    //     type: "list",
+    //     name: "license",
+    //     message: "Under which license is your project covered:",
+    //     choices: ["Apache", "Creative Commons", "GNU GPLv3", "MIT", "Mozilla", "None"],
+    // },
+    // {
+    //     type: "input",
+    //     name: "rightsHolder",
+    //     message: "Project copyright holder's name:",
+    // },
+    // {
+    //     type: "input",
+    //     name: "year",
+    //     message: "Project copyright year:",
+    //     default() {
+    //         return "2022"
+    //     }
     // },
 ];
 
