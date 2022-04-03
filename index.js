@@ -95,7 +95,7 @@ const questions = [
         type: "input",
         name: "rightsHolder",
         message: "Project copyright holder's name:",
-        when(answers){
+        when(answers) {
             return answers.license != "Creative Commons";
         },
         validate(value) {
@@ -106,7 +106,7 @@ const questions = [
         type: "input",
         name: "year",
         message: "Project copyright year:",
-        when(answers){
+        when(answers) {
             return answers.license != "Creative Commons";
         },
         default() {
