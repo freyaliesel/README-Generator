@@ -26,7 +26,7 @@ ${data.testConfirm ? `## Tests\n\n${data.testInfo}\n\n${data.testLink}` : ""}
 
 ## Contact
 
-Find more of my projects at [github.com/${data.github}](https://github.com/${data.github})
+Find more projects at [github.com/${data.github}](https://github.com/${data.github})
 For questions, email [${data.email}](mailto:${data.email})
 
 
