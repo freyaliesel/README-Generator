@@ -1,29 +1,33 @@
-# README Generator
+# README_Generator
 
-Assignment is to create a program that will generate a README file based on user input acquired via command-line prompts.
+## Description
 
-### User Story
-```
-AS A developer  
-I WANT a README generator  
-SO THAT I can quickly create a professional README for a new project
-```
+Command-line application that uses node.js to create a markdown file based on user input.
 
-### Acceptance criteria 
-```md
-GIVEN a command-line application that accepts user input
-WHEN I am prompted for information about my application repository
-THEN a high-quality, professional README.md is generated with the title of my project and sections entitled Description, Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions
-WHEN I enter my project title
-THEN this is displayed as the title of the README
-WHEN I enter a description, installation instructions, usage information, contribution guidelines, and test instructions
-THEN this information is added to the sections of the README entitled Description, Installation, Usage, Contributing, and Tests
-WHEN I choose a license for my application from a list of options
-THEN a badge for that license is added near the top of the README and a notice is added to the section of the README entitled License that explains which license the application is covered under
-WHEN I enter my GitHub username
-THEN this is added to the section of the README entitled Questions, with a link to my GitHub profile
-WHEN I enter my email address
-THEN this is added to the section of the README entitled Questions, with instructions on how to reach me with additional questions
-WHEN I click on the links in the Table of Contents
-THEN I am taken to the corresponding section of the README
-```
+## Table of Contents
+
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contact](#contact)
+- [License](#license)
+
+## Installation
+
+Ensure that [Node Package Manager](https://www.npmjs.com/) is installed on your device. Open the terminal inside the folder containing the cloned code, and enter "npm i" on the command line.
+
+## Usage
+
+![live demo](./assets/README_generator_demo.gif)
+
+## Contact
+
+Find more projects at [github.com/freyaliesel](https://github.com/freyaliesel)
+For questions, email [freyacodes@gmail.com](mailto:freyacodes@gmail.com)
+
+## License
+
+Copyright (C) K Glidden 2022
+
+The owner of this project has not yet selected a license.
+
+If interested in using any part of this code, please contact the project owner.
