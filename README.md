@@ -13,7 +13,7 @@ Command-line application that uses node.js to create a markdown file based on us
 
 ## Installation
 
-Ensure that [Node Package Manager](https://www.npmjs.com/) is installed on your device. Open the terminal inside the folder containing the cloned code, and enter "npm i" on the command line.
+Ensure that [Node Package Manager](https://www.npmjs.com/) is installed in your IDE. Open the terminal inside the folder containing the cloned code, and enter "npm i" on the command line.
 
 ## Usage
 
@@ -26,7 +26,7 @@ For questions, email [freyacodes@gmail.com](mailto:freyacodes@gmail.com)
 
 ## License
 
-Copyright (C) K Glidden 2022
+Copyright (C) 2022 K Glidden
 
 The owner of this project has not yet selected a license.
 
