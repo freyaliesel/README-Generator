@@ -39,16 +39,6 @@ const questions = [
     },
     {
         type: "input",
-        name: "credits",
-        message: "Credit other contributors"
-    },
-    {
-        type: "input",
-        name: "assets",
-        message: "Credit third-party assets that require attribution:"
-    },
-    {
-        type: "input",
         name: "contribute",
         message: "Contribution guidelines:",
         validate(value) {
@@ -105,6 +95,9 @@ const questions = [
         type: "input",
         name: "rightsHolder",
         message: "Project copyright holder's name:",
+        when(answers){
+            return answers.license != "Creative Commons";
+        },
         validate(value) {
             return value ? true : "Copyright holder name is required";
         }
@@ -113,6 +106,9 @@ const questions = [
         type: "input",
         name: "year",
         message: "Project copyright year:",
+        when(answers){
+            return answers.license != "Creative Commons";
+        },
         default() {
             return "2022"
         },

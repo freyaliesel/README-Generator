@@ -43,28 +43,32 @@ Licensed under the Apache License, Version 2.0 (the "License"); you may not use 
 
 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.`,
         },
-
         {
-          name: "Creative Commons",
-          text: `This work is licensed under a [Creative Commons Attribution Share Alike 4.0 International License.](https://creativecommons.org/licenses/by/4.0/legalcode)`
+            name: "Creative Commons",
+            text: `This work is licensed under a [Creative Commons Attribution Share Alike 4.0 International License.](https://creativecommons.org/licenses/by/4.0/legalcode)`
         },
-
         {
-          name: "GNU GPLv3",
-          text: `Copyright (C) ${year} ${name}
+            name: "GNU GPLv3",
+            text: `Copyright (C) ${year} ${name}
 This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
 
 This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the [GNU General Public License](https://www.gnu.org/licenses/gpl-3.0) for more details.`
         },
-
         {
             name: "MIT",
             text: `This project is licensed under the [MIT License](https://opensource.org/licenses/MIT)`,
         },
-
         {
-          name: "MPL 2.0",
-          text: `This project is licensed under the [Mozilla Public License 2.0](https://opensource.org/licenses/MPL-2.0)`
+            name: "MPL 2.0",
+            text: `This project is licensed under the [Mozilla Public License 2.0](https://opensource.org/licenses/MPL-2.0)`
+        },
+        {
+            name: "None",
+            text: `Copyright (C) ${year} ${name}
+
+The owner of this project has not yet selected a license.\n
+If interested in using any part of this code, please contact the project owner.`
+
         }
     ];
 
@@ -82,10 +86,10 @@ This program is distributed in the hope that it will be useful, but WITHOUT ANY 
             return licenses[3].text;
 
         case "MPL 2.0":
-          return licenses[4].text;
+            return licenses[4].text;
 
         default:
-            return "";
+            return licenses[5].text;
     }
 }
 
