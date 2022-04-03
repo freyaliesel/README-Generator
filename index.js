@@ -89,7 +89,7 @@ const questions = [
         type: "list",
         name: "license",
         message: "Under which license is your project covered:",
-        choices: ["Apache", "Creative Commons", "GNU GPLv3", "MIT", "Mozilla", "None"],
+        choices: ["Apache", "Creative Commons", "GNU AGPLv3", "GNU GPLv3", "MIT", "Mozilla", "None"],
     },
     {
         type: "input",
