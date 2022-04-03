@@ -18,7 +18,7 @@ Ensure that [Node Package Manager](https://www.npmjs.com/) is installed in your 
 ## Usage
 
 ![live demo](./assets/README_generator_demo.gif)
-![video](https://drive.google.com/file/d/1rUHDyTSKdYp0BZdMmIHkweS0fZdXr-qt/view)
+[video walkthrough](https://drive.google.com/file/d/1rUHDyTSKdYp0BZdMmIHkweS0fZdXr-qt/view)
 
 ## Contact
 
