@@ -37,16 +37,16 @@ const questions = [
             return value ? true : "Provide written instruction and/or a link in markdown";
         }
     },
-    // {
-    //     type: "input",
-    //     name: "credits",
-    //     message: "Credit other contributors"
-    // },
-    // {
-    //     type: "input",
-    //     name: "assets",
-    //     message: "Credit third-party assets that require attribution:"
-    // },
+    {
+        type: "input",
+        name: "credits",
+        message: "Credit other contributors"
+    },
+    {
+        type: "input",
+        name: "assets",
+        message: "Credit third-party assets that require attribution:"
+    },
     {
         type: "input",
         name: "contribute",
@@ -56,11 +56,27 @@ const questions = [
         }
     },
     {
-        type: "input",
-        name: "tests",
+        type: "confirm",
+        name: "testConfirm",
         message: "Do you have tests?:",
-        default() {
-            return "no"
+    },
+    {
+        type: "input",
+        name: "testLink",
+        message: "Provide a link to your tests:",
+        when(answers) {
+            return answers.testConfirm;
+        },
+        validate(value) {
+            return value ? true : "Link is required"
+        }
+    },
+    {
+        type: "input",
+        name: "testInfo",
+        message: "Provide instruction on how to run the tests:",
+        when(answers) {
+            return answers.testConfirm;
         }
     },
     {

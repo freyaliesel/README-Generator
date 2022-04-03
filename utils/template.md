@@ -14,15 +14,15 @@ ${data.usage ? `- [Usage](#usage)` : ""}
 - [Contact](#contact)
 ${data.license ? `- [License](#license)`: ""}
 
-${data.install ? `## Installation\n\n ${data.install}` : ""}
+${data.install ? `## Installation\n\n${data.install}` : ""}
 
-${data.features ? `## Features\n\n ${data.features}` : ""}   
+${data.features ? `## Features\n\n${data.features}` : ""}   
 
-${data.usage ? `## Usage\n\n ${data.usage}` : ""}
+${data.usage ? `## Usage\n\n${data.usage}` : ""}
 
-${data.credits ? `## Contributions\n\n ${data.credits}` : ""}
+${data.credits ? `## Contributions\n\n${data.credits}` : ""}
 
-${data.tests ? `## Tests\n\n ${data.tests}` : ""}
+${data.testConfirm ? `## Tests\n\n${data.testInfo}\n\n${data.testLink}` : ""}
 
 ## Contact
 
