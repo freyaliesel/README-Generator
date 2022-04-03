@@ -6,19 +6,16 @@ function renderLicenseBadge(license) {
     switch (license) {
         case "Apache":
             return "[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)";
-
         case "Creative Commons":
-            return "[![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC_BY--SA_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/)"
-
+            return "[![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC_BY--SA_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/)";
+        case "GNU AGPLv3":
+            return "[![License: AGPL v3](https://img.shields.io/badge/License-AGPL_v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)";
         case "GNU GPLv3":
             return "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)";
-
         case "MIT":
             return "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)";
-
         case "MPL 2.0":
             return "[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)";
-
         default:
             return "";
     }
@@ -45,14 +42,21 @@ Unless required by applicable law or agreed to in writing, software distributed 
         },
         {
             name: "Creative Commons",
-            text: `This work is licensed under a [Creative Commons Attribution Share Alike 4.0 International License.](https://creativecommons.org/licenses/by/4.0/legalcode)`
+            text: `This work is licensed under a [Creative Commons Attribution Share Alike 4.0 International License.](https://creativecommons.org/licenses/by/4.0/legalcode)`,
+        },
+        {
+            name: "GNU AGPLv3",
+            text: `Copyright (C) ${year} ${name}
+
+This program is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the [GNU Affero General Public License](https://www.gnu.org/licenses/agpl-3.0) for more details.`,
         },
         {
             name: "GNU GPLv3",
             text: `Copyright (C) ${year} ${name}
 This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
 
-This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the [GNU General Public License](https://www.gnu.org/licenses/gpl-3.0) for more details.`
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the [GNU General Public License](https://www.gnu.org/licenses/gpl-3.0) for more details.`,
         },
         {
             name: "MIT",
@@ -60,36 +64,32 @@ This program is distributed in the hope that it will be useful, but WITHOUT ANY 
         },
         {
             name: "MPL 2.0",
-            text: `This project is licensed under the [Mozilla Public License 2.0](https://opensource.org/licenses/MPL-2.0)`
+            text: `This project is licensed under the [Mozilla Public License 2.0](https://opensource.org/licenses/MPL-2.0)`,
         },
         {
             name: "None",
             text: `Copyright (C) ${year} ${name}
 
-The owner of this project has not yet selected a license.\n
-If interested in using any part of this code, please contact the project owner.`
-
-        }
+The owner of this project has not selected a license.\n
+If interested in using any part of this code, please contact the project owner.`,
+        },
     ];
 
     switch (license) {
         case "Apache":
             return licenses[0].text;
-        
         case "Creative Commons":
             return licenses[1].text;
-
-        case "GNU GPLv3":
+        case "GNU AGPLv3":
             return licenses[2].text;
-
-        case "MIT":
+        case "GNU GPLv3":
             return licenses[3].text;
-
-        case "MPL 2.0":
+        case "MIT":
             return licenses[4].text;
-
-        default:
+        case "MPL 2.0":
             return licenses[5].text;
+        default:
+            return licenses[6].text;
     }
 }
 
